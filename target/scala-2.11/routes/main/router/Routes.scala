@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
-// @SOURCE:/home/jk/activator-play-slick-angularjs/conf/routes
-// @DATE:Tue Apr 10 20:06:16 IST 2018
+// @SOURCE:/home/jk/projects/Scala/scala-play-dashboard/conf/routes
+// @DATE:Wed Apr 11 11:48:44 IST 2018
 
 package router
 
@@ -16,37 +16,33 @@ import _root_.controllers.Assets.Asset
 class Routes(
   override val errorHandler: play.api.http.HttpErrorHandler, 
   // @LINE:6
-  Application_3: controllers.Application,
-  // @LINE:10
-  LocationController_4: controllers.LocationController,
-  // @LINE:11
-  EmployeeController_0: controllers.EmployeeController,
-  // @LINE:22
+  Application_2: controllers.Application,
+  // @LINE:9
+  EmployeeController_3: controllers.EmployeeController,
+  // @LINE:20
   Assets_1: controllers.Assets,
-  // @LINE:25
-  WebJarAssets_2: controllers.WebJarAssets,
+  // @LINE:23
+  WebJarAssets_0: controllers.WebJarAssets,
   val prefix: String
 ) extends GeneratedRouter {
 
    @javax.inject.Inject()
    def this(errorHandler: play.api.http.HttpErrorHandler,
     // @LINE:6
-    Application_3: controllers.Application,
-    // @LINE:10
-    LocationController_4: controllers.LocationController,
-    // @LINE:11
-    EmployeeController_0: controllers.EmployeeController,
-    // @LINE:22
+    Application_2: controllers.Application,
+    // @LINE:9
+    EmployeeController_3: controllers.EmployeeController,
+    // @LINE:20
     Assets_1: controllers.Assets,
-    // @LINE:25
-    WebJarAssets_2: controllers.WebJarAssets
-  ) = this(errorHandler, Application_3, LocationController_4, EmployeeController_0, Assets_1, WebJarAssets_2, "/")
+    // @LINE:23
+    WebJarAssets_0: controllers.WebJarAssets
+  ) = this(errorHandler, Application_2, EmployeeController_3, Assets_1, WebJarAssets_0, "/")
 
   import ReverseRouteContext.empty
 
   def withPrefix(prefix: String): Routes = {
     router.RoutesPrefix.setPrefix(prefix)
-    new Routes(errorHandler, Application_3, LocationController_4, EmployeeController_0, Assets_1, WebJarAssets_2, prefix)
+    new Routes(errorHandler, Application_2, EmployeeController_3, Assets_1, WebJarAssets_0, prefix)
   }
 
   private[this] val defaultPrefix: String = {
@@ -55,13 +51,11 @@ class Routes(
 
   def documentation = List(
     ("""GET""", this.prefix, """controllers.Application.index"""),
-    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """loc/""", """controllers.Application.index_loc"""),
-    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """loc/list""", """controllers.LocationController.list"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """emp/list""", """controllers.EmployeeController.list"""),
-    ("""POST""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """loc/create""", """controllers.LocationController.create"""),
-    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """loc/edit""", """controllers.LocationController.edit(locId:Int)"""),
-    ("""POST""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """loc/update""", """controllers.LocationController.update"""),
-    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """loc/delete""", """controllers.LocationController.delete(locId:Int)"""),
+    ("""POST""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """emp/create""", """controllers.EmployeeController.create"""),
+    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """emp/edit""", """controllers.EmployeeController.edit(empId:Int)"""),
+    ("""POST""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """emp/update""", """controllers.EmployeeController.update"""),
+    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """emp/delete""", """controllers.EmployeeController.delete(empId:Int)"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """assets/""" + "$" + """file<.+>""", """controllers.Assets.versioned(path:String = "/public", file:Asset)"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """webjars/""" + "$" + """file<.+>""", """controllers.WebJarAssets.at(file:String)"""),
     Nil
@@ -76,7 +70,7 @@ class Routes(
     PathPattern(List(StaticPart(this.prefix)))
   )
   private[this] lazy val controllers_Application_index0_invoker = createInvoker(
-    Application_3.index,
+    Application_2.index,
     HandlerDef(this.getClass.getClassLoader,
       "router",
       "controllers.Application",
@@ -88,130 +82,96 @@ class Routes(
     )
   )
 
-  // @LINE:7
-  private[this] lazy val controllers_Application_index_loc1_route = Route("GET",
-    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("loc/")))
-  )
-  private[this] lazy val controllers_Application_index_loc1_invoker = createInvoker(
-    Application_3.index_loc,
-    HandlerDef(this.getClass.getClassLoader,
-      "router",
-      "controllers.Application",
-      "index_loc",
-      Nil,
-      "GET",
-      """""",
-      this.prefix + """loc/"""
-    )
-  )
-
-  // @LINE:10
-  private[this] lazy val controllers_LocationController_list2_route = Route("GET",
-    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("loc/list")))
-  )
-  private[this] lazy val controllers_LocationController_list2_invoker = createInvoker(
-    LocationController_4.list,
-    HandlerDef(this.getClass.getClassLoader,
-      "router",
-      "controllers.LocationController",
-      "list",
-      Nil,
-      "GET",
-      """ Employee related routes""",
-      this.prefix + """loc/list"""
-    )
-  )
-
-  // @LINE:11
-  private[this] lazy val controllers_EmployeeController_list3_route = Route("GET",
+  // @LINE:9
+  private[this] lazy val controllers_EmployeeController_list1_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("emp/list")))
   )
-  private[this] lazy val controllers_EmployeeController_list3_invoker = createInvoker(
-    EmployeeController_0.list,
+  private[this] lazy val controllers_EmployeeController_list1_invoker = createInvoker(
+    EmployeeController_3.list,
     HandlerDef(this.getClass.getClassLoader,
       "router",
       "controllers.EmployeeController",
       "list",
       Nil,
       "GET",
-      """""",
+      """ Employee related routes""",
       this.prefix + """emp/list"""
     )
   )
 
-  // @LINE:13
-  private[this] lazy val controllers_LocationController_create4_route = Route("POST",
-    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("loc/create")))
+  // @LINE:11
+  private[this] lazy val controllers_EmployeeController_create2_route = Route("POST",
+    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("emp/create")))
   )
-  private[this] lazy val controllers_LocationController_create4_invoker = createInvoker(
-    LocationController_4.create,
+  private[this] lazy val controllers_EmployeeController_create2_invoker = createInvoker(
+    EmployeeController_3.create,
     HandlerDef(this.getClass.getClassLoader,
       "router",
-      "controllers.LocationController",
+      "controllers.EmployeeController",
       "create",
       Nil,
       "POST",
       """""",
-      this.prefix + """loc/create"""
+      this.prefix + """emp/create"""
     )
   )
 
-  // @LINE:15
-  private[this] lazy val controllers_LocationController_edit5_route = Route("GET",
-    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("loc/edit")))
+  // @LINE:13
+  private[this] lazy val controllers_EmployeeController_edit3_route = Route("GET",
+    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("emp/edit")))
   )
-  private[this] lazy val controllers_LocationController_edit5_invoker = createInvoker(
-    LocationController_4.edit(fakeValue[Int]),
+  private[this] lazy val controllers_EmployeeController_edit3_invoker = createInvoker(
+    EmployeeController_3.edit(fakeValue[Int]),
     HandlerDef(this.getClass.getClassLoader,
       "router",
-      "controllers.LocationController",
+      "controllers.EmployeeController",
       "edit",
       Seq(classOf[Int]),
       "GET",
       """""",
-      this.prefix + """loc/edit"""
+      this.prefix + """emp/edit"""
     )
   )
 
-  // @LINE:17
-  private[this] lazy val controllers_LocationController_update6_route = Route("POST",
-    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("loc/update")))
+  // @LINE:15
+  private[this] lazy val controllers_EmployeeController_update4_route = Route("POST",
+    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("emp/update")))
   )
-  private[this] lazy val controllers_LocationController_update6_invoker = createInvoker(
-    LocationController_4.update,
+  private[this] lazy val controllers_EmployeeController_update4_invoker = createInvoker(
+    EmployeeController_3.update,
     HandlerDef(this.getClass.getClassLoader,
       "router",
-      "controllers.LocationController",
+      "controllers.EmployeeController",
       "update",
       Nil,
       "POST",
       """""",
-      this.prefix + """loc/update"""
+      this.prefix + """emp/update"""
     )
   )
 
-  // @LINE:19
-  private[this] lazy val controllers_LocationController_delete7_route = Route("GET",
-    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("loc/delete")))
+  // @LINE:17
+  private[this] lazy val controllers_EmployeeController_delete5_route = Route("GET",
+    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("emp/delete")))
   )
-  private[this] lazy val controllers_LocationController_delete7_invoker = createInvoker(
-    LocationController_4.delete(fakeValue[Int]),
+  private[this] lazy val controllers_EmployeeController_delete5_invoker = createInvoker(
+    EmployeeController_3.delete(fakeValue[Int]),
     HandlerDef(this.getClass.getClassLoader,
       "router",
-      "controllers.LocationController",
+      "controllers.EmployeeController",
       "delete",
       Seq(classOf[Int]),
       "GET",
       """""",
-      this.prefix + """loc/delete"""
+      this.prefix + """emp/delete"""
     )
   )
 
-  // @LINE:22
-  private[this] lazy val controllers_Assets_versioned8_route = Route("GET",
+  // @LINE:20
+  private[this] lazy val controllers_Assets_versioned6_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("assets/"), DynamicPart("file", """.+""",false)))
   )
-  private[this] lazy val controllers_Assets_versioned8_invoker = createInvoker(
+  private[this] lazy val controllers_Assets_versioned6_invoker = createInvoker(
     Assets_1.versioned(fakeValue[String], fakeValue[Asset]),
     HandlerDef(this.getClass.getClassLoader,
       "router",
@@ -224,12 +184,12 @@ class Routes(
     )
   )
 
-  // @LINE:25
-  private[this] lazy val controllers_WebJarAssets_at9_route = Route("GET",
+  // @LINE:23
+  private[this] lazy val controllers_WebJarAssets_at7_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("webjars/"), DynamicPart("file", """.+""",false)))
   )
-  private[this] lazy val controllers_WebJarAssets_at9_invoker = createInvoker(
-    WebJarAssets_2.at(fakeValue[String]),
+  private[this] lazy val controllers_WebJarAssets_at7_invoker = createInvoker(
+    WebJarAssets_0.at(fakeValue[String]),
     HandlerDef(this.getClass.getClassLoader,
       "router",
       "controllers.WebJarAssets",
@@ -247,61 +207,49 @@ class Routes(
     // @LINE:6
     case controllers_Application_index0_route(params) =>
       call { 
-        controllers_Application_index0_invoker.call(Application_3.index)
+        controllers_Application_index0_invoker.call(Application_2.index)
       }
   
-    // @LINE:7
-    case controllers_Application_index_loc1_route(params) =>
+    // @LINE:9
+    case controllers_EmployeeController_list1_route(params) =>
       call { 
-        controllers_Application_index_loc1_invoker.call(Application_3.index_loc)
-      }
-  
-    // @LINE:10
-    case controllers_LocationController_list2_route(params) =>
-      call { 
-        controllers_LocationController_list2_invoker.call(LocationController_4.list)
+        controllers_EmployeeController_list1_invoker.call(EmployeeController_3.list)
       }
   
     // @LINE:11
-    case controllers_EmployeeController_list3_route(params) =>
+    case controllers_EmployeeController_create2_route(params) =>
       call { 
-        controllers_EmployeeController_list3_invoker.call(EmployeeController_0.list)
+        controllers_EmployeeController_create2_invoker.call(EmployeeController_3.create)
       }
   
     // @LINE:13
-    case controllers_LocationController_create4_route(params) =>
-      call { 
-        controllers_LocationController_create4_invoker.call(LocationController_4.create)
+    case controllers_EmployeeController_edit3_route(params) =>
+      call(params.fromQuery[Int]("empId", None)) { (empId) =>
+        controllers_EmployeeController_edit3_invoker.call(EmployeeController_3.edit(empId))
       }
   
     // @LINE:15
-    case controllers_LocationController_edit5_route(params) =>
-      call(params.fromQuery[Int]("locId", None)) { (locId) =>
-        controllers_LocationController_edit5_invoker.call(LocationController_4.edit(locId))
+    case controllers_EmployeeController_update4_route(params) =>
+      call { 
+        controllers_EmployeeController_update4_invoker.call(EmployeeController_3.update)
       }
   
     // @LINE:17
-    case controllers_LocationController_update6_route(params) =>
-      call { 
-        controllers_LocationController_update6_invoker.call(LocationController_4.update)
+    case controllers_EmployeeController_delete5_route(params) =>
+      call(params.fromQuery[Int]("empId", None)) { (empId) =>
+        controllers_EmployeeController_delete5_invoker.call(EmployeeController_3.delete(empId))
       }
   
-    // @LINE:19
-    case controllers_LocationController_delete7_route(params) =>
-      call(params.fromQuery[Int]("locId", None)) { (locId) =>
-        controllers_LocationController_delete7_invoker.call(LocationController_4.delete(locId))
-      }
-  
-    // @LINE:22
-    case controllers_Assets_versioned8_route(params) =>
+    // @LINE:20
+    case controllers_Assets_versioned6_route(params) =>
       call(Param[String]("path", Right("/public")), params.fromPath[Asset]("file", None)) { (path, file) =>
-        controllers_Assets_versioned8_invoker.call(Assets_1.versioned(path, file))
+        controllers_Assets_versioned6_invoker.call(Assets_1.versioned(path, file))
       }
   
-    // @LINE:25
-    case controllers_WebJarAssets_at9_route(params) =>
+    // @LINE:23
+    case controllers_WebJarAssets_at7_route(params) =>
       call(params.fromPath[String]("file", None)) { (file) =>
-        controllers_WebJarAssets_at9_invoker.call(WebJarAssets_2.at(file))
+        controllers_WebJarAssets_at7_invoker.call(WebJarAssets_0.at(file))
       }
   }
 }

@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
-// @SOURCE:/home/jk/activator-play-slick-angularjs/conf/routes
-// @DATE:Tue Apr 10 20:06:16 IST 2018
+// @SOURCE:/home/jk/projects/Scala/scala-play-dashboard/conf/routes
+// @DATE:Wed Apr 11 11:48:44 IST 2018
 
 import play.api.routing.JavaScriptReverseRoute
 import play.api.mvc.{ QueryStringBindable, PathBindable, Call, JavascriptLiteral }
@@ -14,27 +14,7 @@ import _root_.controllers.Assets.Asset
 package controllers.javascript {
   import ReverseRouteContext.empty
 
-  // @LINE:22
-  class ReverseAssets(_prefix: => String) {
-
-    def _defaultPrefix: String = {
-      if (_prefix.endsWith("/")) "" else "/"
-    }
-
-  
-    // @LINE:22
-    def versioned: JavaScriptReverseRoute = JavaScriptReverseRoute(
-      "controllers.Assets.versioned",
-      """
-        function(file1) {
-          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "assets/" + (""" + implicitly[PathBindable[Asset]].javascriptUnbind + """)("file", file1)})
-        }
-      """
-    )
-  
-  }
-
-  // @LINE:25
+  // @LINE:23
   class ReverseWebJarAssets(_prefix: => String) {
 
     def _defaultPrefix: String = {
@@ -42,7 +22,7 @@ package controllers.javascript {
     }
 
   
-    // @LINE:25
+    // @LINE:23
     def at: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.WebJarAssets.at",
       """
@@ -54,60 +34,80 @@ package controllers.javascript {
   
   }
 
-  // @LINE:10
-  class ReverseLocationController(_prefix: => String) {
+  // @LINE:9
+  class ReverseEmployeeController(_prefix: => String) {
 
     def _defaultPrefix: String = {
       if (_prefix.endsWith("/")) "" else "/"
     }
 
   
-    // @LINE:13
+    // @LINE:11
     def create: JavaScriptReverseRoute = JavaScriptReverseRoute(
-      "controllers.LocationController.create",
+      "controllers.EmployeeController.create",
       """
         function() {
-          return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "loc/create"})
-        }
-      """
-    )
-  
-    // @LINE:19
-    def delete: JavaScriptReverseRoute = JavaScriptReverseRoute(
-      "controllers.LocationController.delete",
-      """
-        function(locId0) {
-          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "loc/delete" + _qS([(""" + implicitly[QueryStringBindable[Int]].javascriptUnbind + """)("locId", locId0)])})
-        }
-      """
-    )
-  
-    // @LINE:10
-    def list: JavaScriptReverseRoute = JavaScriptReverseRoute(
-      "controllers.LocationController.list",
-      """
-        function() {
-          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "loc/list"})
-        }
-      """
-    )
-  
-    // @LINE:15
-    def edit: JavaScriptReverseRoute = JavaScriptReverseRoute(
-      "controllers.LocationController.edit",
-      """
-        function(locId0) {
-          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "loc/edit" + _qS([(""" + implicitly[QueryStringBindable[Int]].javascriptUnbind + """)("locId", locId0)])})
+          return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "emp/create"})
         }
       """
     )
   
     // @LINE:17
-    def update: JavaScriptReverseRoute = JavaScriptReverseRoute(
-      "controllers.LocationController.update",
+    def delete: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.EmployeeController.delete",
+      """
+        function(empId0) {
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "emp/delete" + _qS([(""" + implicitly[QueryStringBindable[Int]].javascriptUnbind + """)("empId", empId0)])})
+        }
+      """
+    )
+  
+    // @LINE:9
+    def list: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.EmployeeController.list",
       """
         function() {
-          return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "loc/update"})
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "emp/list"})
+        }
+      """
+    )
+  
+    // @LINE:13
+    def edit: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.EmployeeController.edit",
+      """
+        function(empId0) {
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "emp/edit" + _qS([(""" + implicitly[QueryStringBindable[Int]].javascriptUnbind + """)("empId", empId0)])})
+        }
+      """
+    )
+  
+    // @LINE:15
+    def update: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.EmployeeController.update",
+      """
+        function() {
+          return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "emp/update"})
+        }
+      """
+    )
+  
+  }
+
+  // @LINE:20
+  class ReverseAssets(_prefix: => String) {
+
+    def _defaultPrefix: String = {
+      if (_prefix.endsWith("/")) "" else "/"
+    }
+
+  
+    // @LINE:20
+    def versioned: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.Assets.versioned",
+      """
+        function(file1) {
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "assets/" + (""" + implicitly[PathBindable[Asset]].javascriptUnbind + """)("file", file1)})
         }
       """
     )
@@ -122,42 +122,12 @@ package controllers.javascript {
     }
 
   
-    // @LINE:7
-    def index_loc: JavaScriptReverseRoute = JavaScriptReverseRoute(
-      "controllers.Application.index_loc",
-      """
-        function() {
-          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "loc/"})
-        }
-      """
-    )
-  
     // @LINE:6
     def index: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Application.index",
       """
         function() {
           return _wA({method:"GET", url:"""" + _prefix + """"})
-        }
-      """
-    )
-  
-  }
-
-  // @LINE:11
-  class ReverseEmployeeController(_prefix: => String) {
-
-    def _defaultPrefix: String = {
-      if (_prefix.endsWith("/")) "" else "/"
-    }
-
-  
-    // @LINE:11
-    def list: JavaScriptReverseRoute = JavaScriptReverseRoute(
-      "controllers.EmployeeController.list",
-      """
-        function() {
-          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "emp/list"})
         }
       """
     )

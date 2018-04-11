@@ -74,8 +74,8 @@ Seq[Any](format.raw/*1.30*/("""
 object index extends index_Scope0.index
               /*
                   -- GENERATED --
-                  DATE: Tue Apr 10 18:07:13 IST 2018
-                  SOURCE: /home/jk/activator-play-slick-angularjs/app/views/index.scala.html
+                  DATE: Wed Apr 11 11:44:54 IST 2018
+                  SOURCE: /home/jk/projects/Scala/scala-play-dashboard/app/views/index.scala.html
                   HASH: 49bd488f24199e01f0e1aa4faba73aa9972e1eaf
                   MATRIX: 533->1|656->29|684->32|716->56|738->70|777->72|805->74|1691->934|1705->939|1750->963|1782->969|1796->974|1844->1001|1876->1007|1890->1012|1939->1040|1968->1042|2006->1050
                   LINES: 20->1|25->1|27->3|27->3|27->3|27->3|29->5|51->27|51->27|51->27|52->28|52->28|52->28|53->29|53->29|53->29|55->31|56->32

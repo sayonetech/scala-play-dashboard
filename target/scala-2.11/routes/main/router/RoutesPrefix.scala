@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
-// @SOURCE:/home/jk/activator-play-slick-angularjs/conf/routes
-// @DATE:Tue Apr 10 20:06:16 IST 2018
+// @SOURCE:/home/jk/projects/Scala/scala-play-dashboard/conf/routes
+// @DATE:Wed Apr 11 11:48:44 IST 2018
 
 
 package router {

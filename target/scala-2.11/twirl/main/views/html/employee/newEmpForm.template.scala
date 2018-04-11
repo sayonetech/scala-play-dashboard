@@ -81,8 +81,8 @@ Seq[Any](format.raw/*2.1*/("""<!-- Employee Form Modal -->
 object newEmpForm extends newEmpForm_Scope0.newEmpForm
               /*
                   -- GENERATED --
-                  DATE: Tue Apr 10 18:07:13 IST 2018
-                  SOURCE: /home/jk/activator-play-slick-angularjs/app/views/employee/newEmpForm.scala.html
+                  DATE: Wed Apr 11 11:44:54 IST 2018
+                  SOURCE: /home/jk/projects/Scala/scala-play-dashboard/app/views/employee/newEmpForm.scala.html
                   HASH: 71ca5ad0d1610bc61153726b867c6fb260e3a254
                   MATRIX: 628->1
                   LINES: 25->2
