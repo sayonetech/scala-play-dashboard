@@ -1,0 +1,28 @@
+<table class="table table-hover">
+    <thead>
+    <th>Username</th>
+    <th>Email</th>
+    <th>First Name</th>
+    <th>Last Name</th>
+    <th></th>
+    <th></th>
+    </thead>
+    <tbody>
+    <tr ng-repeat="user in employees | filter: searchEmp">
+        <td>{{user.username}}</td>
+        <td>{{user.email}}</td>
+        <td>{{user.firstname}}</td>
+        <td>{{user.lastname}}</td>
+        <td>
+            <i title="Edit" style="color: #128d36;" data-toggle="modal" data-target="#editEmpModal" class="glyphicon glyphicon-edit cursorPointer" ng-click="editEmployee(user)">
+            </i>
+        </td>
+        <td>
+            <i title="Delete" style="color: #d85010;" class="glyphicon glyphicon-trash cursorPointer" ng-confirm-message="Are you sure want to delete?" ng-confirm-click="deleteEmployee(user.id)">
+            </i>
+        </td>
+    </tr>
+    </tbody>
+</table>
+
+<p style="color: rgb(110, 114, 114)">Showing <strong style="color: rgb(42, 41, 41);">{{ (employees | filter:searchEmp).length }}</strong> of <strong style="color: rgb(16, 106, 135);">{{employees.length}}</strong> entries</p>

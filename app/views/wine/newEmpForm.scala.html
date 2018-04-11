@@ -1,0 +1,64 @@
+
+<!-- Employee Form Modal -->
+<form id="newEmpForm" role="form" ng-submit="addEmployee()">
+    <div class="modal fade" id="newEmpModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" >
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Fill Employee Details</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label for="empName">name</label>
+                        <input type="text" class="form-control" id="image" name="image" ng-model="newEmployee.image" placeholder="image" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="empEmail">image</label>
+                        <input type="text" class="form-control" id="image" name="image" ng-model="newEmployee.image" placeholder="image" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="empPosition">provider</label>
+                        <input type="text" class="form-control" id="provider"  name="provider" ng-model="newEmployee.provider" placeholder="provider" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="empCompanyName">pairing</label>
+                        <input type="text" class="form-control" id="pairing"  name="pairing" ng-model="newEmployee.pairing" placeholder="pairing" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="empName">description</label>
+                        <input type="text" class="form-control" id="description" name="description" ng-model="newEmployee.description" placeholder="description" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="empEmail">aroma</label>
+                        <input type="text" class="form-control" id="aroma" name="aroma" ng-model="newEmployee.aroma" placeholder="aroma" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="empPosition">taste</label>
+                        <input type="text" class="form-control" id="taste"  name="taste" ng-model="newEmployee.taste" placeholder="taste" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="empCompanyName">latitude</label>
+                        <input type="text" class="form-control" id="latitude"  name="latitude" ng-model="newEmployee.latitude" placeholder="latitude" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="empCompanyName">longitude</label>
+                        <input type="text" class="form-control" id="longitude"  name="longitude" ng-model="newEmployee.longitude" placeholder="longitude" required>
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal" >Cancel</button>
+                    <input type="submit" ng-disabled="newEmpForm.$invalid" class="btn btn-warning" id="submit" value="Add New" />
+                </div>
+            </div>
+        </div>
+    </div>
+</form>

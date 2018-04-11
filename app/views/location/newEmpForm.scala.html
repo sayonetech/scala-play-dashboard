@@ -1,0 +1,52 @@
+
+<!-- Employee Form Modal -->
+<form id="newEmpForm" role="form" ng-submit="addEmployee()">
+    <div class="modal fade" id="newEmpModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" >
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Fill Employee Details</h4>
+                </div>
+                <div class="modal-body">
+
+                    <div class="form-group">
+                        <label for="empName">name</label>
+                        <input type="text" class="form-control" id="empName" name="name" ng-model="newEmployee.name" placeholder="name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="empEmail">latitude</label>
+                        <input type="email" class="form-control" id="latitude" name="latitude" ng-model="newEmployee.latitude" placeholder="latitude" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="empPosition">longitude</label>
+                        <input type="text" class="form-control" id="longitude"  name="longitude" ng-model="newEmployee.longitude" placeholder="longitude" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="empCompanyName">locType</label>
+                        <input type="text" class="form-control" id="locType"  name="locType" ng-model="newEmployee.locType" placeholder="locType" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="empCompanyName">image</label>
+                        <input type="text" class="form-control" id="image"  name="image" ng-model="newEmployee.image" placeholder="image url" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="empCompanyName">description</label>
+                        <input type="text" class="form-control" id="description"  name="description" ng-model="newEmployee.description" placeholder="description" required>
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal" >Cancel</button>
+                    <input type="submit" ng-disabled="newEmpForm.$invalid" class="btn btn-warning" id="submit" value="Add New" />
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
