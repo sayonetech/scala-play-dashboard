@@ -1,0 +1,38 @@
+[0m[[31merror[0m] [0m/home/jk/activator-play-slick-angularjs/app/controllers/LocationController.scala:35: No Json serializer found for type List[models.Location]. Try to implement an implicit Writes or Format for this type.[0m
+[0m[[31merror[0m] [0m      Ok(successResponse( Json.toJson(res), "Getting Employee list successfully"))[0m
+[0m[[31merror[0m] [0m                                     ^[0m
+[0m[[31merror[0m] [0m/home/jk/activator-play-slick-angularjs/app/controllers/LocationController.scala:44: No Json deserializer found for type models.Location. Try to implement an implicit Reads or Format for this type.[0m
+[0m[[31merror[0m] [0m    request.body.validate[Location].fold(error => Future.successful(BadRequest(JsError.toJson(error))), { loc =>[0m
+[0m[[31merror[0m] [0m                         ^[0m
+[0m[[31merror[0m] [0m/home/jk/activator-play-slick-angularjs/app/controllers/LocationController.scala:66: No Json serializer found for type models.Location. Try to implement an implicit Writes or Format for this type.[0m
+[0m[[31merror[0m] [0m        successResponse(Json.toJson(loc), "Getting Employee successfully")))[0m
+[0m[[31merror[0m] [0m                                   ^[0m
+[0m[[31merror[0m] [0m/home/jk/activator-play-slick-angularjs/app/controllers/LocationController.scala:75: No Json deserializer found for type models.Location. Try to implement an implicit Reads or Format for this type.[0m
+[0m[[31merror[0m] [0m    request.body.validate[Location].fold(error => Future.successful(BadRequest(JsError.toJson(error))), { loc =>[0m
+[0m[[31merror[0m] [0m                         ^[0m
+[0m[[31merror[0m] [0m/home/jk/activator-play-slick-angularjs/app/repo/LocationRepository.scala:21: not found: value employee[0m
+[0m[[31merror[0m] [0m  def update(loc: Location): Future[Int] = db.run { locTableQuery.filter(_.id === employee.id).update(loc) }[0m
+[0m[[31merror[0m] [0m                                                                                  ^[0m
+[0m[[31merror[0m] [0m/home/jk/activator-play-slick-angularjs/app/repo/LocationRepository.scala:46: No matching Shape found.[0m
+[0m[[31merror[0m] [0mSlick does not know how to map the given types.[0m
+[0m[[31merror[0m] [0mPossible causes: T in Table[T] does not match your * projection. Or you use an unsupported type in a Query (e.g. scala List).[0m
+[0m[[31merror[0m] [0m  Required level: slick.lifted.FlatShapeLevel[0m
+[0m[[31merror[0m] [0m     Source type: (slick.lifted.Rep[String], slick.lifted.Rep[String], slick.lifted.Rep[String], slick.lifted.Rep[String], slick.lifted.Rep[String], slick.lifted.Rep[Option[Int]])[0m
+[0m[[31merror[0m] [0m   Unpacked type: (String, Float, Float, String, String)[0m
+[0m[[31merror[0m] [0m     Packed type: Any[0m
+[0m[[31merror[0m] [0m    def * = (name, latitude, longitude, locType, image, id.?) <> (Location.tupled, Location.unapply)[0m
+[0m[[31merror[0m] [0m                                                              ^[0m
+[0m[[33mwarn[0m] [0m/home/jk/activator-play-slick-angularjs/app/views/index.scala.html:29: Adaptation of argument list by inserting () has been deprecated: leaky (Object-receiving) target makes this especially dangerous.[0m
+[0m[[33mwarn[0m] [0m        signature: editEmpForm.apply(param: Any): play.twirl.api.HtmlFormat.Appendable[0m
+[0m[[33mwarn[0m] [0m  given arguments: <none>[0m
+[0m[[33mwarn[0m] [0m after adaptation: editEmpForm((): Unit)[0m
+[0m[[33mwarn[0m] [0m    @views.html.employee.editEmpForm()[0m
+[0m[[33mwarn[0m] [0m                                    ^[0m
+[0m[[33mwarn[0m] [0m/home/jk/activator-play-slick-angularjs/app/views/index_loc.scala.html:29: Adaptation of argument list by inserting () has been deprecated: leaky (Object-receiving) target makes this especially dangerous.[0m
+[0m[[33mwarn[0m] [0m        signature: editEmpForm.apply(param: Any): play.twirl.api.HtmlFormat.Appendable[0m
+[0m[[33mwarn[0m] [0m  given arguments: <none>[0m
+[0m[[33mwarn[0m] [0m after adaptation: editEmpForm((): Unit)[0m
+[0m[[33mwarn[0m] [0m        @views.html.employee.editEmpForm()[0m
+[0m[[33mwarn[0m] [0m                                        ^[0m
+[0m[[33mwarn[0m] [0mtwo warnings found[0m
+[0m[[31merror[0m] [0m6 errors found[0m

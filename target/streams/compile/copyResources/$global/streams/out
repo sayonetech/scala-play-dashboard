@@ -1,0 +1,8 @@
+[0m[[0mdebug[0m] [0mCopy resource mappings: [0m
+[0m[[0mdebug[0m] [0m	(/home/jk/activator-play-slick-angularjs/conf/routes,/home/jk/activator-play-slick-angularjs/target/scala-2.11/classes/routes)[0m
+[0m[[0mdebug[0m] [0m	(/home/jk/activator-play-slick-angularjs/conf/evolutions,/home/jk/activator-play-slick-angularjs/target/scala-2.11/classes/evolutions)[0m
+[0m[[0mdebug[0m] [0m	(/home/jk/activator-play-slick-angularjs/conf/application.conf,/home/jk/activator-play-slick-angularjs/target/scala-2.11/classes/application.conf)[0m
+[0m[[0mdebug[0m] [0m	(/home/jk/activator-play-slick-angularjs/conf/logback.xml,/home/jk/activator-play-slick-angularjs/target/scala-2.11/classes/logback.xml)[0m
+[0m[[0mdebug[0m] [0m	(/home/jk/activator-play-slick-angularjs/conf/postgres.conf,/home/jk/activator-play-slick-angularjs/target/scala-2.11/classes/postgres.conf)[0m
+[0m[[0mdebug[0m] [0m	(/home/jk/activator-play-slick-angularjs/conf/evolutions/default,/home/jk/activator-play-slick-angularjs/target/scala-2.11/classes/evolutions/default)[0m
+[0m[[0mdebug[0m] [0m	(/home/jk/activator-play-slick-angularjs/conf/evolutions/default/1.sql,/home/jk/activator-play-slick-angularjs/target/scala-2.11/classes/evolutions/default/1.sql)[0m

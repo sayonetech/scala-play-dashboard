@@ -1,0 +1,26 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# Home page
+GET     /                                   controllers.Application.index
+GET     /loc/                                   controllers.Application.index_loc
+
+# Employee related routes
+GET     /loc/list                           controllers.LocationController.list
+GET     /emp/list                           controllers.EmployeeController.list
+
+POST    /loc/create                         controllers.LocationController.create
+
+GET     /loc/edit                           controllers.LocationController.edit(locId: Int)
+
+POST    /loc/update                         controllers.LocationController.update
+
+GET     /loc/delete                         controllers.LocationController.delete(locId: Int)
+
+# Map static resources from the /public folder to the /assets URL path
+GET     /assets/*file                       controllers.Assets.versioned(path="/public", file: Asset)
+
+# WebJars
+GET     /webjars/*file                      controllers.WebJarAssets.at(file)
+
