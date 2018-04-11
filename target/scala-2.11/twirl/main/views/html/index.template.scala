@@ -24,7 +24,7 @@ class index extends BaseScalaTemplate[play.twirl.api.HtmlFormat.Appendable,Forma
 
 Seq[Any](format.raw/*1.30*/("""
 
-"""),_display_(/*3.2*/main("Play Angular App")/*3.26*/(webJarAssets)/*3.40*/ {_display_(Seq[Any](format.raw/*3.42*/("""
+"""),_display_(/*3.2*/main("User Database")/*3.23*/(webJarAssets)/*3.37*/ {_display_(Seq[Any](format.raw/*3.39*/("""
 
 """),format.raw/*5.1*/("""<div ng-controller="empCtrl">
 
@@ -32,7 +32,7 @@ Seq[Any](format.raw/*1.30*/("""
         <div class="row emp-header">
             <!-- Employee search -->
         <div class="col-sm-4 col-md-4 col-lg-4">
-            <input class="form-control" style="width: 70%;" type="text" ng-model="searchEmp" placeholder="Search employee ..."/>
+            <input class="form-control" style="width: 70%;" type="text" ng-model="searchEmp" placeholder="Search User ..."/>
         </div>
             <!-- Alert messages -->
             <div class="col-sm-4 col-md-4 col-lg-4">
@@ -42,7 +42,7 @@ Seq[Any](format.raw/*1.30*/("""
             </div>
             <!-- Add new employee link -->
         <div class="col-sm-4 col-md-4 col-lg-4">
-          <botton class="btn btn-success btn-sm add-button" style="font-weight: 600;" data-toggle="modal" data-target="#newEmpModal">Add New Employee</botton>
+          <botton class="btn btn-success btn-sm add-button" style="font-weight: 600;" data-toggle="modal" data-target="#newEmpModal">Add New User</botton>
         </div>
         </div>
      </div>
@@ -74,10 +74,10 @@ Seq[Any](format.raw/*1.30*/("""
 object index extends index_Scope0.index
               /*
                   -- GENERATED --
-                  DATE: Wed Apr 11 11:44:54 IST 2018
+                  DATE: Wed Apr 11 13:28:07 IST 2018
                   SOURCE: /home/jk/projects/Scala/scala-play-dashboard/app/views/index.scala.html
-                  HASH: 49bd488f24199e01f0e1aa4faba73aa9972e1eaf
-                  MATRIX: 533->1|656->29|684->32|716->56|738->70|777->72|805->74|1691->934|1705->939|1750->963|1782->969|1796->974|1844->1001|1876->1007|1890->1012|1939->1040|1968->1042|2006->1050
+                  HASH: ab1280489620222dedc66228f6bb776b1704b431
+                  MATRIX: 533->1|656->29|684->32|713->53|735->67|774->69|802->71|1680->923|1694->928|1739->952|1771->958|1785->963|1833->990|1865->996|1879->1001|1928->1029|1957->1031|1995->1039
                   LINES: 20->1|25->1|27->3|27->3|27->3|27->3|29->5|51->27|51->27|51->27|52->28|52->28|52->28|53->29|53->29|53->29|55->31|56->32
                   -- GENERATED --
               */

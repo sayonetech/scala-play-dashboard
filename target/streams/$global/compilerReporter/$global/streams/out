@@ -1,7 +1,79 @@
-[0m[[33mwarn[0m] [0m/home/jk/projects/Scala/scala-play-dashboard/app/views/index.scala.html:29: Adaptation of argument list by inserting () has been deprecated: leaky (Object-receiving) target makes this especially dangerous.[0m
-[0m[[33mwarn[0m] [0m        signature: editEmpForm.apply(param: Any): play.twirl.api.HtmlFormat.Appendable[0m
-[0m[[33mwarn[0m] [0m  given arguments: <none>[0m
-[0m[[33mwarn[0m] [0m after adaptation: editEmpForm((): Unit)[0m
-[0m[[33mwarn[0m] [0m    @views.html.employee.editEmpForm()[0m
-[0m[[33mwarn[0m] [0m                                    ^[0m
-[0m[[33mwarn[0m] [0mone warning found[0m
+[0m[[31merror[0m] [0m/home/jk/projects/Scala/scala-play-dashboard/app/controllers/TasteController.scala:9: not found: type Controller[0m
+[0m[[31merror[0m] [0mclass TasteController @Inject()(empRepository: UserRepository) extends Controller {[0m
+[0m[[31merror[0m] [0m                                                                       ^[0m
+[0m[[31merror[0m] [0m/home/jk/projects/Scala/scala-play-dashboard/app/controllers/TasteController.scala:9: not found: type Inject[0m
+[0m[[31merror[0m] [0mclass TasteController @Inject()(empRepository: UserRepository) extends Controller {[0m
+[0m[[31merror[0m] [0m                       ^[0m
+[0m[[31merror[0m] [0m/home/jk/projects/Scala/scala-play-dashboard/app/controllers/TasteController.scala:13: not found: value Logger[0m
+[0m[[31merror[0m] [0m  val logger = Logger(this.getClass())[0m
+[0m[[31merror[0m] [0m               ^[0m
+[0m[[31merror[0m] [0m/home/jk/projects/Scala/scala-play-dashboard/app/controllers/TasteController.scala:16: not found: value obj[0m
+[0m[[31merror[0m] [0m    obj("status" -> SUCCESS, "data" -> data, "msg" -> message)[0m
+[0m[[31merror[0m] [0m    ^[0m
+[0m[[31merror[0m] [0m/home/jk/projects/Scala/scala-play-dashboard/app/controllers/TasteController.scala:15: not found: type JsValue[0m
+[0m[[31merror[0m] [0m  private def successResponse(data: JsValue, message: String) = {[0m
+[0m[[31merror[0m] [0m                                    ^[0m
+[0m[[31merror[0m] [0m/home/jk/projects/Scala/scala-play-dashboard/app/controllers/TasteController.scala:20: not found: value Action[0m
+[0m[[31merror[0m] [0m  def list() = Action.async {[0m
+[0m[[31merror[0m] [0m               ^[0m
+[0m[[31merror[0m] [0m/home/jk/projects/Scala/scala-play-dashboard/app/controllers/TasteController.scala:23: not found: value Ok[0m
+[0m[[31merror[0m] [0m      Ok(successResponse(Json.toJson(res), "Getting User list successfully"))[0m
+[0m[[31merror[0m] [0m      ^[0m
+[0m[[31merror[0m] [0m/home/jk/projects/Scala/scala-play-dashboard/app/controllers/TasteController.scala:23: not found: value Json[0m
+[0m[[31merror[0m] [0m      Ok(successResponse(Json.toJson(res), "Getting User list successfully"))[0m
+[0m[[31merror[0m] [0m                         ^[0m
+[0m[[31merror[0m] [0m/home/jk/projects/Scala/scala-play-dashboard/app/controllers/TasteController.scala:21: Cannot find an implicit ExecutionContext. You might pass[0m
+[0m[[31merror[0m] [0man (implicit ec: ExecutionContext) parameter to your method[0m
+[0m[[31merror[0m] [0mor import scala.concurrent.ExecutionContext.Implicits.global.[0m
+[0m[[31merror[0m] [0m    empRepository.getAll().map { res =>[0m
+[0m[[31merror[0m] [0m                               ^[0m
+[0m[[31merror[0m] [0m/home/jk/projects/Scala/scala-play-dashboard/app/controllers/TasteController.scala:28: not found: value Action[0m
+[0m[[31merror[0m] [0m  def create() = Action.async(parse.json) { request =>[0m
+[0m[[31merror[0m] [0m                 ^[0m
+[0m[[31merror[0m] [0m/home/jk/projects/Scala/scala-play-dashboard/app/controllers/TasteController.scala:28: not found: value parse[0m
+[0m[[31merror[0m] [0m  def create() = Action.async(parse.json) { request =>[0m
+[0m[[31merror[0m] [0m                              ^[0m
+[0m[[31merror[0m] [0m/home/jk/projects/Scala/scala-play-dashboard/app/controllers/TasteController.scala:38: not found: value Action[0m
+[0m[[31merror[0m] [0m  def delete(empId: Int) = Action.async { request =>[0m
+[0m[[31merror[0m] [0m                           ^[0m
+[0m[[31merror[0m] [0m/home/jk/projects/Scala/scala-play-dashboard/app/controllers/TasteController.scala:40: not found: value Ok[0m
+[0m[[31merror[0m] [0m      Ok(successResponse(Json.toJson("{}"), "User has been deleted successfully."))[0m
+[0m[[31merror[0m] [0m      ^[0m
+[0m[[31merror[0m] [0m/home/jk/projects/Scala/scala-play-dashboard/app/controllers/TasteController.scala:40: not found: value Json[0m
+[0m[[31merror[0m] [0m      Ok(successResponse(Json.toJson("{}"), "User has been deleted successfully."))[0m
+[0m[[31merror[0m] [0m                         ^[0m
+[0m[[31merror[0m] [0m/home/jk/projects/Scala/scala-play-dashboard/app/controllers/TasteController.scala:39: Cannot find an implicit ExecutionContext. You might pass[0m
+[0m[[31merror[0m] [0man (implicit ec: ExecutionContext) parameter to your method[0m
+[0m[[31merror[0m] [0mor import scala.concurrent.ExecutionContext.Implicits.global.[0m
+[0m[[31merror[0m] [0m    empRepository.delete(empId).map { _ =>[0m
+[0m[[31merror[0m] [0m                                    ^[0m
+[0m[[31merror[0m] [0m/home/jk/projects/Scala/scala-play-dashboard/app/controllers/TasteController.scala:45: not found: type Action[0m
+[0m[[31merror[0m] [0m  def edit(empId: Int): Action[AnyContent] = Action.async { request =>[0m
+[0m[[31merror[0m] [0m                        ^[0m
+[0m[[31merror[0m] [0m/home/jk/projects/Scala/scala-play-dashboard/app/controllers/TasteController.scala:45: not found: value Action[0m
+[0m[[31merror[0m] [0m  def edit(empId: Int): Action[AnyContent] = Action.async { request =>[0m
+[0m[[31merror[0m] [0m                                             ^[0m
+[0m[[31merror[0m] [0m/home/jk/projects/Scala/scala-play-dashboard/app/controllers/TasteController.scala:47: not found: value Ok[0m
+[0m[[31merror[0m] [0m      empOpt.fold(Ok(obj("status" -> ERROR, "data" -> "{}", "msg" -> "User does not exist.")))(emp => Ok([0m
+[0m[[31merror[0m] [0m                  ^[0m
+[0m[[31merror[0m] [0m/home/jk/projects/Scala/scala-play-dashboard/app/controllers/TasteController.scala:47: not found: value obj[0m
+[0m[[31merror[0m] [0m      empOpt.fold(Ok(obj("status" -> ERROR, "data" -> "{}", "msg" -> "User does not exist.")))(emp => Ok([0m
+[0m[[31merror[0m] [0m                     ^[0m
+[0m[[31merror[0m] [0m/home/jk/projects/Scala/scala-play-dashboard/app/controllers/TasteController.scala:47: not found: value Ok[0m
+[0m[[31merror[0m] [0m      empOpt.fold(Ok(obj("status" -> ERROR, "data" -> "{}", "msg" -> "User does not exist.")))(emp => Ok([0m
+[0m[[31merror[0m] [0m                                                                                                      ^[0m
+[0m[[31merror[0m] [0m/home/jk/projects/Scala/scala-play-dashboard/app/controllers/TasteController.scala:48: not found: value Json[0m
+[0m[[31merror[0m] [0m        successResponse(Json.toJson(emp), "Getting USer successfully")))[0m
+[0m[[31merror[0m] [0m                        ^[0m
+[0m[[31merror[0m] [0m/home/jk/projects/Scala/scala-play-dashboard/app/controllers/TasteController.scala:46: Cannot find an implicit ExecutionContext. You might pass[0m
+[0m[[31merror[0m] [0man (implicit ec: ExecutionContext) parameter to your method[0m
+[0m[[31merror[0m] [0mor import scala.concurrent.ExecutionContext.Implicits.global.[0m
+[0m[[31merror[0m] [0m    empRepository.getById(empId).map { empOpt =>[0m
+[0m[[31merror[0m] [0m                                     ^[0m
+[0m[[31merror[0m] [0m/home/jk/projects/Scala/scala-play-dashboard/app/controllers/TasteController.scala:53: not found: value Action[0m
+[0m[[31merror[0m] [0m  def update = Action.async(parse.json) { request =>[0m
+[0m[[31merror[0m] [0m               ^[0m
+[0m[[31merror[0m] [0m/home/jk/projects/Scala/scala-play-dashboard/app/controllers/TasteController.scala:53: not found: value parse[0m
+[0m[[31merror[0m] [0m  def update = Action.async(parse.json) { request =>[0m
+[0m[[31merror[0m] [0m                            ^[0m
+[0m[[31merror[0m] [0m24 errors found[0m

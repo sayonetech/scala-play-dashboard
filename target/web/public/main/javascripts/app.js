@@ -28,7 +28,7 @@ app.controller('empCtrl', function($scope, $http, $timeout, $uibModal, EmpServic
          }, function(err){
              // error
         });
-      }
+      };
 
     $scope.newEmployee = {};
 
@@ -43,7 +43,7 @@ app.controller('empCtrl', function($scope, $http, $timeout, $uibModal, EmpServic
           }, function(err){
                 // error
           });
-    }
+    };
 
      $scope.deleteEmployee = function(empId) {
            EmpService.deleteEmployee(empId).then(function(res){
@@ -58,7 +58,7 @@ app.controller('empCtrl', function($scope, $http, $timeout, $uibModal, EmpServic
          }, function(err){
                  // error
           });
-      }
+      };
 
     getAllEmployee();
 

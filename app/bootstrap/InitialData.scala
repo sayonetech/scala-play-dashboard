@@ -2,15 +2,15 @@ package bootstrap
 
 import com.google.inject.Inject
 import javax.inject.Singleton
-import repo.EmployeeRepository
-import models.Employee
+import repo.UserRepository
+import models._
 import java.util.Date
 import play.api.libs.concurrent.Execution.Implicits.defaultContext
 import play.Logger
 import scala.concurrent.Await
 import scala.concurrent.duration.Duration
 
-class InitialData @Inject() (employeeRepo: EmployeeRepository) {
+class InitialData @Inject() (employeeRepo: UserRepository) {
 
   def insert = for {
     emps <- employeeRepo.getAll() if (emps.length == 0)
@@ -29,9 +29,9 @@ class InitialData @Inject() (employeeRepo: EmployeeRepository) {
 
 object Data {
   val employees = List(
-    Employee("Satendra", "satendra@knoldus.com", "Knoldus","Senior Consultant"),
-    Employee("Mayank", "mayank@knoldus.com",  "knoldus","Senior Consultant"),
-    Employee("Sushil", "sushil@knoldus.com",  "knoldus","Consultant"),
-    Employee("Narayan", "narayan@knoldus.com",  "knoldus","Consultant"),
-    Employee("Himanshu", "himanshu@knoldus.com",  "knoldus","Senior Consultant"))
+    User("Satendra", "satendra@knoldus.com", "Fname","Lname"),
+    User("Mayank", "mayank@knoldus.com",  "Fname","Lname"),
+    User("Sushil", "sushil@knoldus.com",  "Fname","Lname"),
+    User("Narayan", "narayan@knoldus.com",  "Fname","Lname"),
+    User("Himanshu", "himanshu@knoldus.com",  "Fname","Lname"))
 }

@@ -24,25 +24,25 @@ class empList extends BaseScalaTemplate[play.twirl.api.HtmlFormat.Appendable,For
 
 Seq[Any](format.raw/*1.1*/("""<table class="table table-hover">
     <thead>
-    <th>Name</th>
+    <th>Username</th>
     <th>Email</th>
-    <th>Company</th>
-    <th>Position</th>
+    <th>First Name</th>
+    <th>Last Name</th>
     <th></th>
     <th></th>
     </thead>
     <tbody>
-    <tr ng-repeat="emp in employees | filter: searchEmp">
-        <td>"""),format.raw/*12.13*/("""{"""),format.raw/*12.14*/("""{"""),format.raw/*12.15*/("""emp.name"""),format.raw/*12.23*/("""}"""),format.raw/*12.24*/("""}"""),format.raw/*12.25*/("""</td>
-        <td>"""),format.raw/*13.13*/("""{"""),format.raw/*13.14*/("""{"""),format.raw/*13.15*/("""emp.email"""),format.raw/*13.24*/("""}"""),format.raw/*13.25*/("""}"""),format.raw/*13.26*/("""</td>
-        <td>"""),format.raw/*14.13*/("""{"""),format.raw/*14.14*/("""{"""),format.raw/*14.15*/("""emp.companyName"""),format.raw/*14.30*/("""}"""),format.raw/*14.31*/("""}"""),format.raw/*14.32*/("""</td>
-        <td>"""),format.raw/*15.13*/("""{"""),format.raw/*15.14*/("""{"""),format.raw/*15.15*/("""emp.position"""),format.raw/*15.27*/("""}"""),format.raw/*15.28*/("""}"""),format.raw/*15.29*/("""</td>
+    <tr ng-repeat="user in employees | filter: searchEmp">
+        <td>"""),format.raw/*12.13*/("""{"""),format.raw/*12.14*/("""{"""),format.raw/*12.15*/("""user.username"""),format.raw/*12.28*/("""}"""),format.raw/*12.29*/("""}"""),format.raw/*12.30*/("""</td>
+        <td>"""),format.raw/*13.13*/("""{"""),format.raw/*13.14*/("""{"""),format.raw/*13.15*/("""user.email"""),format.raw/*13.25*/("""}"""),format.raw/*13.26*/("""}"""),format.raw/*13.27*/("""</td>
+        <td>"""),format.raw/*14.13*/("""{"""),format.raw/*14.14*/("""{"""),format.raw/*14.15*/("""user.firstname"""),format.raw/*14.29*/("""}"""),format.raw/*14.30*/("""}"""),format.raw/*14.31*/("""</td>
+        <td>"""),format.raw/*15.13*/("""{"""),format.raw/*15.14*/("""{"""),format.raw/*15.15*/("""user.lastname"""),format.raw/*15.28*/("""}"""),format.raw/*15.29*/("""}"""),format.raw/*15.30*/("""</td>
         <td>
-            <i title="Edit" style="color: #128d36;" data-toggle="modal" data-target="#editEmpModal" class="glyphicon glyphicon-edit cursorPointer" ng-click="editEmployee(emp)">
+            <i title="Edit" style="color: #128d36;" data-toggle="modal" data-target="#editEmpModal" class="glyphicon glyphicon-edit cursorPointer" ng-click="editEmployee(user)">
             </i>
         </td>
         <td>
-            <i title="Delete" style="color: #d85010;" class="glyphicon glyphicon-trash cursorPointer" ng-confirm-message="Are you sure want to delete?" ng-confirm-click="deleteEmployee(emp.id)">
+            <i title="Delete" style="color: #d85010;" class="glyphicon glyphicon-trash cursorPointer" ng-confirm-message="Are you sure want to delete?" ng-confirm-click="deleteEmployee(user.id)">
             </i>
         </td>
     </tr>
@@ -70,10 +70,10 @@ Seq[Any](format.raw/*1.1*/("""<table class="table table-hover">
 object empList extends empList_Scope0.empList
               /*
                   -- GENERATED --
-                  DATE: Wed Apr 11 11:44:54 IST 2018
+                  DATE: Wed Apr 11 12:58:43 IST 2018
                   SOURCE: /home/jk/projects/Scala/scala-play-dashboard/app/views/employee/empList.scala.html
-                  HASH: 949c8abda465589b370674afa3217390f42d83fc
-                  MATRIX: 622->0|899->249|928->250|957->251|993->259|1022->260|1051->261|1097->279|1126->280|1155->281|1192->290|1221->291|1250->292|1296->310|1325->311|1354->312|1397->327|1426->328|1455->329|1501->347|1530->348|1559->349|1599->361|1628->362|1657->363|2269->947|2298->948|2327->949|2356->950|2423->988|2453->989|2483->990|2567->1045|2597->1046|2627->1047|2672->1063|2702->1064|2732->1065
+                  HASH: af9359de0fbe489c851962141c0990a358def19a
+                  MATRIX: 622->0|908->258|937->259|966->260|1007->273|1036->274|1065->275|1111->293|1140->294|1169->295|1207->305|1236->306|1265->307|1311->325|1340->326|1369->327|1411->341|1440->342|1469->343|1515->361|1544->362|1573->363|1614->376|1643->377|1672->378|2286->964|2315->965|2344->966|2373->967|2440->1005|2470->1006|2500->1007|2584->1062|2614->1063|2644->1064|2689->1080|2719->1081|2749->1082
                   LINES: 25->1|36->12|36->12|36->12|36->12|36->12|36->12|37->13|37->13|37->13|37->13|37->13|37->13|38->14|38->14|38->14|38->14|38->14|38->14|39->15|39->15|39->15|39->15|39->15|39->15|52->28|52->28|52->28|52->28|52->28|52->28|52->28|52->28|52->28|52->28|52->28|52->28|52->28
                   -- GENERATED --
               */

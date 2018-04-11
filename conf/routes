@@ -3,18 +3,21 @@
 # ~~~~
 
 # Home page
-GET     /                                   controllers.Application.index
+GET     /                                   controllers.Application.home
+
+GET     /user/                               controllers.Application.emp
+
 
 # Employee related routes
-GET     /emp/list                           controllers.EmployeeController.list
+GET     /emp/list                           controllers.UserController.list
 
-POST    /emp/create                         controllers.EmployeeController.create
+POST    /emp/create                         controllers.UserController.create
 
-GET     /emp/edit                           controllers.EmployeeController.edit(empId: Int)
+GET     /emp/edit                           controllers.UserController.edit(empId: Int)
 
-POST    /emp/update                         controllers.EmployeeController.update
+POST    /emp/update                         controllers.UserController.update
 
-GET     /emp/delete                         controllers.EmployeeController.delete(empId: Int)
+GET     /emp/delete                         controllers.UserController.delete(empId: Int)
 
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file                       controllers.Assets.versioned(path="/public", file: Asset)

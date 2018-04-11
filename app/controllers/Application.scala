@@ -7,6 +7,9 @@ import views.html
 
 class Application @Inject()(webJarAssets: WebJarAssets) extends Controller {
 
-  def index = Action {Ok(html.index(webJarAssets))}
+  def home = Action {Ok(html.home(webJarAssets))}
+
+  def emp = Action {Ok(html.index(webJarAssets))}
+//  def loc = Action {Ok(html.index(webJarAssets))}
 
 }

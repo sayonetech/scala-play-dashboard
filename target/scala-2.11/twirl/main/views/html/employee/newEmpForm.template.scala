@@ -34,8 +34,8 @@ Seq[Any](format.raw/*2.1*/("""<!-- Employee Form Modal -->
                 <div class="modal-body">
 
                     <div class="form-group">
-                        <label for="empName">Name</label>
-                        <input type="text" class="form-control" id="empName" name="name" ng-model="newEmployee.name" placeholder="Name" required>
+                        <label for="empName">username</label>
+                        <input type="text" class="form-control" id="empName" name="username" ng-model="newEmployee.username" placeholder="username" required>
                     </div>
 
                     <div class="form-group">
@@ -44,13 +44,13 @@ Seq[Any](format.raw/*2.1*/("""<!-- Employee Form Modal -->
                     </div>
 
                     <div class="form-group">
-                        <label for="empPosition">Position</label>
-                        <input type="text" class="form-control" id="empPosition"  name="position" ng-model="newEmployee.position" placeholder="Position" required>
+                        <label for="empPosition">First name</label>
+                        <input type="text" class="form-control" id="empPosition"  name="firstname" ng-model="newEmployee.firstname" placeholder="firstname" required>
                     </div>
 
                     <div class="form-group">
-                        <label for="empCompanyName">Company Name</label>
-                        <input type="text" class="form-control" id="empCompanyName"  name="companyName" ng-model="newEmployee.companyName" placeholder="Company Name" required>
+                        <label for="empCompanyName">Last Name</label>
+                        <input type="text" class="form-control" id="empCompanyName"  name="lastname" ng-model="newEmployee.lastname" placeholder="lastname" required>
                     </div>
 
                 </div>
@@ -81,9 +81,9 @@ Seq[Any](format.raw/*2.1*/("""<!-- Employee Form Modal -->
 object newEmpForm extends newEmpForm_Scope0.newEmpForm
               /*
                   -- GENERATED --
-                  DATE: Wed Apr 11 11:44:54 IST 2018
+                  DATE: Wed Apr 11 13:01:04 IST 2018
                   SOURCE: /home/jk/projects/Scala/scala-play-dashboard/app/views/employee/newEmpForm.scala.html
-                  HASH: 71ca5ad0d1610bc61153726b867c6fb260e3a254
+                  HASH: 1f22fa7fbe6cd14a69358da38c9df8394e0cccd3
                   MATRIX: 628->1
                   LINES: 25->2
                   -- GENERATED --

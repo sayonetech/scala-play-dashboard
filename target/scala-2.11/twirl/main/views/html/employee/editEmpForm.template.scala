@@ -35,8 +35,8 @@ Seq[Any](format.raw/*1.14*/("""
                 </div>
                 <div class="modal-body">
                     <div class="form-group">
-                        <label for="name">Name</label>
-                        <input type="text" class="form-control" ng-model="selectedEmployee.name" id="name" value=""""),format.raw/*15.115*/("""{"""),format.raw/*15.116*/("""{"""),format.raw/*15.117*/("""selectedEmployee.name"""),format.raw/*15.138*/("""}"""),format.raw/*15.139*/("""}"""),format.raw/*15.140*/("""" required>
+                        <label for="name">UserName</label>
+                        <input type="text" class="form-control" ng-model="selectedEmployee.username" id="username" value=""""),format.raw/*15.123*/("""{"""),format.raw/*15.124*/("""{"""),format.raw/*15.125*/("""selectedEmployee.username"""),format.raw/*15.150*/("""}"""),format.raw/*15.151*/("""}"""),format.raw/*15.152*/("""" required>
                     </div>
 
                     <div class="form-group">
@@ -45,13 +45,13 @@ Seq[Any](format.raw/*1.14*/("""
                     </div>
 
                     <div class="form-group">
-                        <label for="position">Position</label>
-                        <input type="text" class="form-control" ng-model="selectedEmployee.position" value=""""),format.raw/*25.109*/("""{"""),format.raw/*25.110*/("""{"""),format.raw/*25.111*/("""selectedEmployee.position"""),format.raw/*25.136*/("""}"""),format.raw/*25.137*/("""}"""),format.raw/*25.138*/("""" id="position" required>
+                        <label for="position">First Name</label>
+                        <input type="text" class="form-control" ng-model="selectedEmployee.firstname" value=""""),format.raw/*25.110*/("""{"""),format.raw/*25.111*/("""{"""),format.raw/*25.112*/("""selectedEmployee.firstname"""),format.raw/*25.138*/("""}"""),format.raw/*25.139*/("""}"""),format.raw/*25.140*/("""" id="firstname" required>
                     </div>
 
                     <div class="form-group">
-                        <label for="companyName">Company Name</label>
-                        <input type="text" class="form-control" ng-model="selectedEmployee.companyName" value=""""),format.raw/*30.112*/("""{"""),format.raw/*30.113*/("""{"""),format.raw/*30.114*/("""selectedEmployee.companyName"""),format.raw/*30.142*/("""}"""),format.raw/*30.143*/("""}"""),format.raw/*30.144*/("""" id="companyName" required>
+                        <label for="companyName">Last Name</label>
+                        <input type="text" class="form-control" ng-model="selectedEmployee.lastname" value=""""),format.raw/*30.109*/("""{"""),format.raw/*30.110*/("""{"""),format.raw/*30.111*/("""selectedEmployee.lastname"""),format.raw/*30.136*/("""}"""),format.raw/*30.137*/("""}"""),format.raw/*30.138*/("""" id="lastname" required>
                     </div>
 
                 </div>
@@ -82,10 +82,10 @@ Seq[Any](format.raw/*1.14*/("""
 object editEmpForm extends editEmpForm_Scope0.editEmpForm
               /*
                   -- GENERATED --
-                  DATE: Wed Apr 11 11:44:54 IST 2018
+                  DATE: Wed Apr 11 13:02:33 IST 2018
                   SOURCE: /home/jk/projects/Scala/scala-play-dashboard/app/views/employee/editEmpForm.scala.html
-                  HASH: 68e0455f83e1e9b63889048762352e624408a80a
-                  MATRIX: 545->1|652->13|680->15|1543->849|1573->850|1603->851|1653->872|1683->873|1713->874|2018->1150|2048->1151|2078->1152|2129->1174|2159->1175|2189->1176|2465->1423|2495->1424|2525->1425|2579->1450|2609->1451|2639->1452|2948->1732|2978->1733|3008->1734|3065->1762|3095->1763|3125->1764
+                  HASH: c290960792a10f8b91361d75a8d4c5f754eedfe9
+                  MATRIX: 545->1|652->13|680->15|1555->861|1585->862|1615->863|1669->888|1699->889|1729->890|2034->1166|2064->1167|2094->1168|2145->1190|2175->1191|2205->1192|2484->1442|2514->1443|2544->1444|2599->1470|2629->1471|2659->1472|2963->1747|2993->1748|3023->1749|3077->1774|3107->1775|3137->1776
                   LINES: 20->1|25->1|27->3|39->15|39->15|39->15|39->15|39->15|39->15|44->20|44->20|44->20|44->20|44->20|44->20|49->25|49->25|49->25|49->25|49->25|49->25|54->30|54->30|54->30|54->30|54->30|54->30
                   -- GENERATED --
               */
