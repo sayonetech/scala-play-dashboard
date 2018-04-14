@@ -8,22 +8,21 @@
     <th>description</th>
     <th>aroma</th>
     <th>taste</th>
-    <th>latitude</th>
-    <th>longitude</th>
+    <th>Location</th>
+
     </thead>
     <tbody>
         <tr ng-repeat="user in employees | filter: searchEmp">
         <td>{{user.id}}</td>
         <td>{{user.name}}</td>
         <td>{{user.firstname}}</td>
-        <td>{{user.image}}</td>
+        <td><img src="{{user.image}}" alt="[image]" height=50px width="auto"></td>
         <td>{{user.provider}}</td>
-        <td>{{user.pairing}}</td>
+        <td><img src="{{user.pairing}}" alt="[pairing]" height=50px width="auto"></td>
         <td>{{user.description}}</td>
-        <td>{{user.aroma}}</td>
-        <td>{{user.taste}}</td>
-        <td>{{user.latitude}}</td>
-        <td>{{user.longitude}}</td>
+        <td><img src="{{user.aroma}}" alt="[image]" height=50px width="auto"></td>
+        <td><img src="{{user.taste}}" alt="[image]" height=50px width="auto"></td>
+        <td>(lat={{user.latitude}}, long={{user.longitude}})</td>
         <td>
             <i title="Edit" style="color: #128d36;" data-toggle="modal" data-target="#editEmpModal" class="glyphicon glyphicon-edit cursorPointer" ng-click="editEmployee(user)">
             </i>
