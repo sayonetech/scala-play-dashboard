@@ -41,15 +41,16 @@ private[repo] trait WineTable  { self: HasDatabaseConfigProvider[JdbcProfile] =>
   private[WineTable] class WineTable(tag: Tag) extends Table[Wine](tag, "Wine") {
     val id: Rep[Int] = column[Int]("id", O.AutoInc, O.PrimaryKey)
     val name: Rep[String] = column[String]("name", O.SqlType("VARCHAR(200)"))
-    val image: Rep[String] = column[String]("provider", O.SqlType("VARCHAR(200)"))
-    val provider: Rep[String] = column[String]("pairing", O.SqlType("VARCHAR(200)"))
-    val pairing: Rep[String] = column[String]("aroma", O.SqlType("VARCHAR(200)"))
-    val description: Rep[String] = column[String]("taste", O.SqlType("VARCHAR(200)"))
-    val aroma: Rep[String] = column[String]("image", O.SqlType("VARCHAR(200)"))
-    val taste: Rep[String] = column[String]("description", O.SqlType("VARCHAR(200)"))
-    val latitude: Rep[String] = column[String]("description", O.SqlType("VARCHAR(200)"))
-    val longitude: Rep[String] = column[String]("description", O.SqlType("VARCHAR(200)"))
+    val image: Rep[String] = column[String]("image", O.SqlType("VARCHAR(200)"))
+    val provider: Rep[String] = column[String]("provider", O.SqlType("VARCHAR(200)"))
+    val pairing: Rep[String] = column[String]("pairing", O.SqlType("VARCHAR(200)"))
+    val description: Rep[String] = column[String]("description", O.SqlType("VARCHAR(200)"))
+    val aroma: Rep[String] = column[String]("aroma", O.SqlType("VARCHAR(200)"))
+    val taste: Rep[String] = column[String]("taste", O.SqlType("VARCHAR(200)"))
+    val latitude: Rep[String] = column[String]("latitude", O.SqlType("VARCHAR(200)"))
+    val longitude: Rep[String] = column[String]("longitude", O.SqlType("VARCHAR(200)"))
 //    val rest_name: Rep[String] = column[String]("rest_name", O.SqlType("VARCHAR(200)"))
+
 
     def * = (name, image, provider, pairing, description, aroma, taste, latitude, longitude,  id.?) <> (Wine.tupled, Wine.unapply)
   }
