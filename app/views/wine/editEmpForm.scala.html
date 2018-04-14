@@ -47,7 +47,7 @@
                         <label for="companyName">taste</label>
                         <input type="text" class="form-control" ng-model="selectedEmployee.taste" value="{{selectedEmployee.taste}}" id="taste" required>
                     </div>
-                </div>
+
                     <div class="form-group">
                         <label for="text">latitude</label>
                         <input type="text" class="form-control" ng-model="selectedEmployee.latitude" id="latitude" required value="{{selectedEmployee.latitude}}">
@@ -57,11 +57,11 @@
                         <label for="position">longitude</label>
                         <input type="text" class="form-control" ng-model="selectedEmployee.longitude" value="{{selectedEmployee.longitude}}" id="longitude" required>
                     </div>
-
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal" >Cancel</button>
                     <input type="submit" ng-disabled="editEmpForm.$invalid" class="btn btn-warning" value="Save" />
+                </div>
                 </div>
             </div>
         </div>
