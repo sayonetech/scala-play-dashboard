@@ -3,29 +3,29 @@
 # ~~~~
 
 # Home page
-GET     /                                   controllers.Application.home
+#GET     /                                   controllers.Application.home
 
 
 # User related routes
-GET     /user/                              controllers.Application.emp
-GET     /emp/list                           controllers.UserController.list
-POST    /emp/create                         controllers.UserController.create
-GET     /emp/edit                           controllers.UserController.edit(empId: Int)
-POST    /emp/update                         controllers.UserController.update
-GET     /emp/delete                         controllers.UserController.delete(empId: Int)
+#GET     /user/                              controllers.Application.emp
+#GET     /emp/list                           controllers.UserController.list
+#POST    /emp/create                         controllers.UserController.create
+#GET     /emp/edit                           controllers.UserController.edit(empId: Int)
+#POST    /emp/update                         controllers.UserController.update
+#GET     /emp/delete                         controllers.UserController.delete(empId: Int)
 
 
 # Location related routes
-GET     /loc/                               controllers.Application.loc
-GET     /loc/list                           controllers.LocationController.list
-POST    /loc/create                         controllers.LocationController.create
-GET     /loc/edit                           controllers.LocationController.edit(empId: Int)
-POST    /loc/update                         controllers.LocationController.update
-GET     /loc/delete                         controllers.LocationController.delete(empId: Int)
+#GET     /loc/                               controllers.Application.loc
+#GET     /loc/list                           controllers.LocationController.list
+#POST    /loc/create                         controllers.LocationController.create
+#GET     /loc/edit                           controllers.LocationController.edit(empId: Int)
+#POST    /loc/update                         controllers.LocationController.update
+#GET     /loc/delete                         controllers.LocationController.delete(empId: Int)
 
 
 # Wine related routes
-GET     /wine/                               controllers.Application.wine
+GET     /                                    controllers.Application.wine
 GET     /wine/list                           controllers.WineController.list
 POST    /wine/create                         controllers.WineController.create
 GET     /wine/edit                           controllers.WineController.edit(empId: Int)
