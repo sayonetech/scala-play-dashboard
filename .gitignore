@@ -5,6 +5,7 @@
 *.log
 build
 logs
+project/.sbtserver
 project/project
 project/target
 target
